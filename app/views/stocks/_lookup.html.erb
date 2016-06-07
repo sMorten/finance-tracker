@@ -26,7 +26,7 @@
       <strong>Symbol:</strong> <%= @stock.ticker %>
       <strong>name:</strong> <%= @stock.name %>
       <strong>price:</strong> <%= @stock.price%>
-
+   <%= link_to "Add to my stocks", users_stocks_path(user: current_user, stock_ticker: @stock.ticker, stock_id: @stock.id ? @stock.id : ''), class: "btn btn-success btn-xs", method: :post %>
 
 
   </div>
